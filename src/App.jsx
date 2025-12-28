@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
 import './index.css' // Make sure this file is empty or valid CSS
 import React, { useState } from 'react';
-import Home from './page/home';
+import Home from './page/Home';
 import Login from './page/Loginpage';
 import Register from './page/Register';
 import BookingList from './page/BookingList';
@@ -19,7 +19,9 @@ import Navbar from './components/Navbar';
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+  const [isLoggedIn, setIsLoggedIn] = useState(
+  !!localStorage.getItem('access')
+);
 
   return (
     <Router>

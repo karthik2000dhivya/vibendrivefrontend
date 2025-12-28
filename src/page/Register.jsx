@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     email: '',
     mobileNumber: '',
     password: '',
@@ -30,7 +30,7 @@ const Register = () => {
 
     try {
       // Endpoint for your backend team
-      // console.log(formData);
+       console.log(formData);
       
       const response = await axios.post('http://127.0.0.1:8000/api/register/', formData);
       console.log('Registration Successful', response.data);
@@ -67,7 +67,7 @@ const Register = () => {
                 <span className="absolute left-3 top-3 text-gray-400">👤</span>
                 <input
                   type="text"
-                  name="name"
+                  name="username"
                   placeholder="Name"
                   className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 outline-none"
                   onChange={handleChange}

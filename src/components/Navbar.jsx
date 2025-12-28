@@ -8,12 +8,12 @@ const Navbar = () => {
 
   // Check if user is logged in whenever the component loads
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('access');
     setIsLoggedIn(!!token);
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('access');
     setIsLoggedIn(false);
     navigate('/login');
   };
